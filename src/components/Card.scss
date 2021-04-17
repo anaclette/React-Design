@@ -1,0 +1,35 @@
+// %card-size {
+// 	width: 300px;
+// 	height: 250px;
+// }
+
+article {
+	// @extend %card-size;
+	// width: 8px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 16px;
+	padding: 15px;
+
+	div {
+		object-fit: contain;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		p:nth-child(1) {
+			color: gray;
+			font-size: 11px;
+		}
+		img {
+			width: 300px;
+			height: 257px;
+		}
+	}
+	h2,
+	p:nth-child(2) {
+		font-size: 16px;
+	}
+	.not-available {
+		background-color: gray;
+	}
+}
