@@ -2,7 +2,7 @@
 
 nav {
 	display: flex;
-	margin: 25px;
+	margin: 40px;
 	div {
 		display: flex;
 		align-items: center;
@@ -21,12 +21,15 @@ ul {
 		font-weight: bold;
 	}
 }
+
 .forms,
 .buttons {
 	display: flex;
 	justify-content: space-evenly;
 	form {
 		height: 100px;
+		display: flex;
+
 		select {
 			align-items: flex-start;
 			border-color: gray;
@@ -34,7 +37,9 @@ ul {
 			background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat
 				right;
 			-webkit-appearance: none;
-			height: 56px;
+			@media (max-width: 600px) {
+				margin: 25px;
+			}
 		}
 		input,
 		select {
@@ -42,14 +47,23 @@ ul {
 			font-size: 26px;
 			font-family: 'Work Sans', sans-serif;
 			border-width: 0 0 2px;
+			height: 62px;
 		}
 		input {
-			height: 40px;
+			padding: 10px;
 			border-color: black;
 			font-weight: bold;
 			letter-spacing: 1px;
 			&[type="text"] {
-				width: 143vh;
+				width: 100vh;
+				height: 40px;
+
+				@media (min-width: 600px) and (max-width: 900px) {
+					width: 100%;
+				}
+				@media (max-width: 600px) {
+					width: 100%;
+				}
 			}
 		}
 		input:focus {
@@ -57,6 +71,18 @@ ul {
 		}
 	}
 }
+
+.fa-home,
+.fa-search {
+	@media (max-width: 600px) {
+		max-width: 8vh;
+	}
+}
+
+.forms {
+	flex-flow: row wrap;
+}
+
 button {
 	font-family: 'Work Sans', sans-serif;
 	font-weight: bold;
