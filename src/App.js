@@ -1,5 +1,7 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './components/Container-cards.scss';
 import './components/Filters.scss';
 import './components/Forms-buttons.scss';
@@ -79,8 +81,7 @@ const App = () => {
 				<div className="buttons">
 					<div>
 						<i>
-							menu icon
-							{/* <FontAwesomeIcon icon={faHome} /> */}
+							<FontAwesomeIcon className="fa-5x" icon={faHome} />
 						</i>
 						<ul>
 							<li>HOME</li>
@@ -89,7 +90,9 @@ const App = () => {
 						</ul>
 					</div>
 					<div>
-						<i>cart icon</i>
+						<i>
+							<FontAwesomeIcon className="fa-2x" icon={faShoppingCart} />
+						</i>
 						<button>LOGIN</button>
 					</div>
 				</div>
@@ -98,7 +101,9 @@ const App = () => {
 			<div className="forms">
 				<div>
 					<form action="post">
-						<i>lupita</i>
+						<i>
+							<FontAwesomeIcon className="fa-3x" icon={faSearch} />
+						</i>
 						<label htmlFor="search-filter">
 							<input type="text" value="living room" />
 						</label>
@@ -152,6 +157,7 @@ const App = () => {
 								type={product.type}
 								price={product.price}
 								img={product.img}
+								rating={product.rating}
 								isAvailable={product.isAvailable}
 								onSale={product.onSale && 'ON SALE!'}
 								key={`idTarjeta-${i}`}

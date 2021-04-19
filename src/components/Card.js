@@ -1,4 +1,7 @@
 import './Card.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Card = ({ title, type, price, img, rating, isAvailable }) => {
 	return (
@@ -12,8 +15,16 @@ const Card = ({ title, type, price, img, rating, isAvailable }) => {
 				<p>${price}</p>
 			</div>
 			<div>
-				<i>{rating}Rating icons</i>
-				<i>Cart icon</i>
+				<i>
+					<FontAwesomeIcon className={rating < 5 ? 'far' : 'fas'} icon={faStar} />
+					<FontAwesomeIcon className={rating < 5 ? 'far' : 'fas'} icon={faStar} />
+					<FontAwesomeIcon className={rating < 5 ? 'far' : 'fas'} icon={faStar} />
+					<FontAwesomeIcon className={rating < 5 ? 'far' : 'fas'} icon={faStar} />
+					<FontAwesomeIcon className={rating < 5 ? 'far' : 'fas'} icon={faStar} />
+				</i>
+				<i>
+					<FontAwesomeIcon className="fa-1x" icon={faCartPlus} />
+				</i>
 			</div>
 		</article>
 	);
