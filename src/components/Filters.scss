@@ -1,49 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-
 .filters {
-	h2 {
-		height: 14px;
-		margin: 0 0 42px;
+	width: 300px;
+	height: 346px;
+	margin: 21px;
+	&_filterBy {
 		opacity: 0.5;
+		font-size: 13px;
+		color: #22232b;
 	}
-	label {
+	.filter {
 		display: flex;
-		flex-direction: column;
-		width: 300px;
-
-		select {
-			height: 34px;
-			margin: 0 15px 15px 0;
-			font-size: 16px;
-			font-family: 'Work Sans', sans-serif;
-			border: none;
-		}
-
-		@media (max-width: 600px) {
-			width: 100%;
-		}
+		justify-content: space-between;
+		height: 36px;
+		margin-top: 25px;
+		border-bottom: 2px solid #eaeaea;
 	}
+	.priceRange {
+		height: 36px;
+		margin-top: 25px;
 
-	.rectangle {
-		width: 300px;
-		height: 2px;
-		margin: 8px 0 8px 0;
-		opacity: 0.1;
-		background-color: #292727;
-	}
-
-	div {
-		&:first-of-type {
-			height: 38px;
-		}
-
-		.circle {
-			border: 2px solid rgb(59, 58, 58);
-			width: 12px;
-			height: 12px;
-			border-radius: 50px;
+		&_slider {
+			height: 2px;
+			margin-top: 25px;
 			display: flex;
 			justify-content: space-between;
+			background-color: #eaeaea;
+			svg {
+				position: relative;
+				bottom: 6px;
+				font-size: 14px;
+				background-color: white;
+			}
+		}
+
+		&_prices {
+			display: flex;
+			justify-content: space-between;
+			p {
+				font-size: 13px;
+				color: #22232b;
+			}
 		}
 	}
 }

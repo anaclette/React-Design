@@ -1,0 +1,13 @@
+.searchBar {
+	display: flex;
+	margin: 20px;
+	justify-content: center;
+	&__icon {
+		font-size: 30px;
+	}
+	&__input {
+		width: 950px;
+		border: none;
+		border-bottom: 2px solid black;
+	}
+}
